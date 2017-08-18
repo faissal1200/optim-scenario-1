@@ -251,7 +251,7 @@ feed_electricity_mv = var_links.sum('mv', 'lv', '*')
 feed_gas_mp = var_links.sum('mp', 'gas', '*')
 ext_feeder = m.addVar(name='ext_feeder')
 
-m.addConstr(ext_feeder == 9.8 * feed_electricity_mv + 0.58 * feed_gas_mp, name='ext_feeder')
+m.addConstr(ext_feeder == 17.68 * feed_electricity_mv + 9.5 * feed_gas_mp, name='ext_feeder')
 
 # multi objective functions
 m.ModelSense = GRB.MINIMIZE
